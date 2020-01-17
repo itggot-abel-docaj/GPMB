@@ -1,2 +1,19 @@
 body 
     p hej
+    - for note in @notes
+        table
+            thead
+                tr
+                    th
+                        h4 = "id : #{note["id"]}"
+            tbody
+                tr
+                    td = note["text"]
+
+
+                
+
+
+        / span = "id : #{note["id"]}"
+        / span = "#{note["text"]}"
+
