@@ -8,8 +8,20 @@ class App < Sinatra::Base
     end
 
     get '/home' do
+        puts "                                     "
         p @notes
+        puts "                              "
         #p @current_user
         slim :'home/index'
     end
+
+    post '/save_note' do
+
+        note = params['note']
+
+         @db.execute('INSERT INTO note
+                        (text, timestamp, userid)
+                        VALUES (?,?,?)',note, 0, 1)
+        redirect '/home'
+     end
 end
