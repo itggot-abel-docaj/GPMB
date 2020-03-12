@@ -1,6 +1,13 @@
 body 
-    p hej
     - for note in @notes
+        form action="/delete/#{note["id"]}" method="post"
+            button type="submit" Delete
+        
+        form action="/edit/#{note["id"]}" method="post"
+            textarea# name="Editbox" cols="30" rows="10" #{note["text"]}
+            button type="submit" Edit
+
+            
         table
             thead
                 tr
