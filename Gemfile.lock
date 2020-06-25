@@ -1,12 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mustermann (1.0.3)
-    rack (2.0.7)
+    rack (2.2.3)
     rack-protection (2.0.7)
       rack
     rb-fsevent (0.10.3)
@@ -27,6 +28,7 @@ GEM
     tilt (2.0.10)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
